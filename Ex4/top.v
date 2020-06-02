@@ -35,7 +35,7 @@ module dice (
 			throw <= 3'b001; // Reset to 1
 		else if (button)
 			throw <= (throw % 6) + 1;
-		else throw <= throw; // (Q1: Necessary/efficient?:) If !button, do nothing. This line covers all possibilities.  
+		else throw <= throw; // (Q1: Is this line necessary/correct/efficient?) If !button, do nothing. This line covers all possibilities.  
 
 		// Q2: the code commented out below resulted in throw = 001 for any combination of inputs. Issue with simultaneous-ness? The above solution doesn't explicitly perform the (000 | 001) ->001 specified in the task.
 
