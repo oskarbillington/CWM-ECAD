@@ -13,7 +13,7 @@
 //  outputs:
 //           throw [2:0]
 //
-//  You need to write the whole file.
+//  You need to write the whole file. 
 //////////////////////////////////////////////////////////////////////////////////
 
 `timescale 1ns / 100ps
