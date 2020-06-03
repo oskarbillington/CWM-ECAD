@@ -20,6 +20,8 @@ create_fileset -constrset -quiet constraints
 #set_property is_enabled false [get_files ${project_constraints}]
 
 #Todo: Add your IP here
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BLOCKMEM
+set_property -dict [list CONFIG.Component_Name {BLOCKMEM} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Write_Width_A {6} CONFIG.Write_Depth_A {64} CONFIG.Read_Width_A {6} CONFIG.Operating_Mode_A {READ_FIRST} CONFIG.Write_Width_B {6} CONFIG.Read_Width_B {6} CONFIG.Load_Init_File {true} CONFIG.Coe_File {/home/centos/CWM-ECAD/Ex7/timestable.COE}] [get_ips BLOCKMEM]
 
 read_verilog "top.v"
 read_verilog "top_tb.v"
