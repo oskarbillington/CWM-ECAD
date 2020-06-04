@@ -36,7 +36,7 @@ module top_tb(
 		// Test sequence: 
 		fac1 = 1;
 		fac2 = 2;
-		#(5*CLK_PERIOD) // Latency of 2 ticks
+		#(2*CLK_PERIOD) // Latency of 2 ticks
 		solution = 6'b000010;
 		$display("Step1: Factor1 = %b, Factor2 = %b, Output = %b", fac1, fac2, product);
 		if (product !== solution) begin
@@ -46,7 +46,7 @@ module top_tb(
 
 		fac1 = 7;
 		fac2 = 6;  
-		#(5*CLK_PERIOD)		
+		#(2*CLK_PERIOD)		
 		solution = fac1*fac2; // b101010
 		$display("Step2: Factor1 = %b, Factor2 = %b, Output = %b", fac1, fac2, product);
 		if (product !== solution) begin
@@ -56,7 +56,7 @@ module top_tb(
 
 		fac1 = 3;
 		fac2 = 4;  
-		#(5*CLK_PERIOD)		
+		#(2*CLK_PERIOD)		
 		solution = fac1*fac2; // b001100
 		$display("Step3: Factor1 = %b, Factor2 = %b, Output = %b", fac1, fac2, product);
 		if (product !== solution) begin
